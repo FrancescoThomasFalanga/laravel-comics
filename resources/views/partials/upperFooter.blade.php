@@ -100,10 +100,10 @@
 
     </div>
 
-    <div class="container cookies">
+    <div class="container cookies pb-5">
 
-        <span>All Site Content TM and @ 2020 DC Entertainment, unless otherwise <a href="">noted here</a>. All right reserved.</span>
-        <a class="d-block pb-5" href="">Cookies Settings</a>
+        <span class="d-block">All Site Content TM and @ 2020 DC Entertainment, unless otherwise <a href="">noted here</a>. All right reserved.</span>
+        <a href="">Cookies Settings</a>
 
     </div>
 
