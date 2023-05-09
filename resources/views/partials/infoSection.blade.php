@@ -1,4 +1,4 @@
-<div class="bg-blue">
+<div class="bg-blue-secondary">
 
     <div class="container">
 

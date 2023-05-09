@@ -25,6 +25,8 @@
 
     @include('partials/infoSection')
 
+    @include('partials/upperFooter')
+
     @include('partials/footer')
 
 </body>

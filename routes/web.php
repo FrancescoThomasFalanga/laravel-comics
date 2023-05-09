@@ -51,7 +51,52 @@ Route::get('/', function () {
         ],
     ];
 
+    $dcComicsLinks = [
+        "Character",
+        "Comics",
+        "Movies",
+        "TV",
+        "Games",
+        "Videos",
+        "News",
+    ];
+
+    $dcLinks = [
+        "Terms Of Use",
+        "Privacy policy (New)",
+        "Ad Choises",
+        "Advertising",
+        "Jobs",
+        "Subscriptions",
+        "Talent Workshops",
+        "CPSC Certificates",
+        "Ratings",
+        "Shop Help",
+        "Contact us",
+    ];
+
+    $sitesLinks = [
+        "DC",
+        "MAD Magazine",
+        "DC Kids",
+        "DC Universe",
+        "DC Power Visa",
+    ];
+
+    $shopLinks = [
+        "Shop DC",
+        "Shop DC Collectibles"
+    ];
+
+    $data = [
+        'dcComicsLinks' => $dcComicsLinks,
+        'dcLinks' => $dcLinks,
+        'sitesLinks' => $sitesLinks,
+        'shopLinks' => $shopLinks
+    ];
+
+
     $comics = config('comics');
 
-    return view('homepage', ['links' => $links, 'comics' => $comics, 'infoSection' => $infoSection]);
+    return view('homepage', $data, ['links' => $links, 'comics' => $comics, 'infoSection' => $infoSection]);
 })->name('homepage');
