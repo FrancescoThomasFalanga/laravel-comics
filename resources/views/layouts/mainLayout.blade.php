@@ -23,6 +23,8 @@
 
     @yield('content')
 
+    @include('partials/infoSection')
+
     @include('partials/footer')
 
 </body>

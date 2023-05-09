@@ -85,8 +85,90 @@ nav {
     }
 
 }
-
-
-
-
 // /HEADER + NAVBAR
+
+
+
+// LINKS SECTION
+div.bg-grey {
+    padding: 50px 50px 20px;
+    background-color: #1c1c1c;
+
+    .comic-card {
+        padding: 10px;
+        font-size: 14px;
+        color: white;
+        text-transform: uppercase;
+
+        .comic-inner {
+            padding-bottom: 30px;
+
+            a {
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .more-content {
+        display: flex;
+        justify-content: center;
+
+        button {
+            background-color: #0282f9;
+            font-weight: bold;
+            color: white;
+            padding: 6px 40px;
+            border: none;
+
+            &:hover {
+                background-color: #0282f9af;
+            }
+        }
+    }
+}
+// /LINKS SECTION
+
+
+
+// INFO SECTION
+div.bg-blue {
+    padding: 40px 0;
+
+    .container {
+
+        .row {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            .col-2 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+                text-transform: uppercase;
+                font-size: 12px;
+                font-weight: bold;
+                color: white;
+
+                .img {
+
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        object-fit: contain;
+                        cursor: pointer;
+                    }
+                }
+
+                .title {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+// /INFO SECTION
