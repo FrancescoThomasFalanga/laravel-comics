@@ -1,3 +1,4 @@
+{{-- Sezione alquanto inutile non si merita i miei commenti, serve solo per la sezione del merchandise --}}
 <div class="bg-blue-secondary">
 
     <div class="container">
@@ -29,3 +30,4 @@
     </div>
 
 </div>
+{{-- /Sezione alquanto inutile non si merita i miei commenti, serve solo per la sezione del merchandise --}}

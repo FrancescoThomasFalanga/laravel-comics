@@ -1,5 +1,6 @@
-@extends('layouts/mainLayout')
+{{-- solita sezione cringe vuota --}}
 
+@extends('layouts/mainLayout')
 
 @section('content')
 
