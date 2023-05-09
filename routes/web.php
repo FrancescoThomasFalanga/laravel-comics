@@ -29,4 +29,4 @@ Route::get('/', function () {
     ];
 
     return view('homepage', ['links' => $links]);
-});
+})->name('homepage');
