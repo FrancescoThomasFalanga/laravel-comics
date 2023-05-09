@@ -403,8 +403,7 @@ div.bg-blue-terziary {
             .container {
                 display: flex;
                 align-items: center;
-                flex-wrap: nowrap;
-                flex-direction: column;
+                gap: 30px;
 
                 .principal {
                     
@@ -418,14 +417,15 @@ div.bg-blue-terziary {
                         display: flex;
                         justify-content: space-between;
                         background-color: #55ba59;
-                        padding: 12px;
                         margin-bottom: 12px;
                         border-bottom: 1px solid #3a8b3e;
+
 
                         .left {
                             display: flex;
                             justify-content: space-between;
-                            width: 60%;
+                            width: 80%;
+                            padding: 12px;
 
                             .us {
                                 color: #85f380;
@@ -441,6 +441,16 @@ div.bg-blue-terziary {
                                 font-weight: bold;
                             }
                         }
+
+                        .right {
+                            border-left: 1px solid black;
+                            padding: 12px;
+
+                            span {
+                                font-weight: bold;
+                                color: white;
+                            }
+                        }
                     }
                 }
 
@@ -448,13 +458,16 @@ div.bg-blue-terziary {
 
                     .random-text {
                         color: black;
+                        font-weight: bold;
+                        text-align: right;
                     }
 
                     .random-img {
 
                         img {
-                            height: 200px;
-                            width: 100px;
+
+                            object-fit: cover;
+                            height: 250px;
                         }
                     }
                 }
@@ -540,7 +553,4 @@ div.bg-blue-terziary {
         }
 
 }
-
-
-
 // SINGLE THUMB

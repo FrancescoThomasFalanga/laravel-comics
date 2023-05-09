@@ -62,7 +62,7 @@
         
                         <div class="random-img">
         
-                            <img class="d-block" src="{{asset('img/adv.jpg')}}" alt="">
+                            <img class="d-block" src="{{ asset('img/nunMeLaCarica.jpg') }}" alt="">
         
                         </div>
         

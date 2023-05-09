@@ -984,7 +984,7 @@ Route::get('/shop', function () {
 
 
 // ROUTE PER I SINGOLI COMIC
-Route::get('/comics/action-comics', function () {
+Route::get('/action-comics', function () {
     
     $links = [
         'characters',
