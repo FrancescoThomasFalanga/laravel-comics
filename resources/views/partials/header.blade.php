@@ -30,7 +30,7 @@
             <ul>
                 @foreach ($links as $link)
                     <li>
-                        <a href="">
+                        <a class="{{ (request()->is($link)) ? 'active' : '' }}" href="{{ route($link) }}">
                             {{$link}}
                         </a>
                     </li>
