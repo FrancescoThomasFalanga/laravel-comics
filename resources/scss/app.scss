@@ -367,3 +367,180 @@ footer {
     }
 }
 // /FOOTER
+
+
+
+// SINGLE THUMB
+div.bg-blue-terziary {
+    background-color: #0282f9;
+    padding: 50px 0;
+
+    .single-thumb {
+
+        position: relative;
+
+        img {
+            position: absolute;
+            bottom: -30px;
+
+            width: 300px;
+        }
+    }
+}
+
+
+.bordino {
+    border-bottom: 2px solid grey;
+        
+        .info-flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-bottom: 2px solid grey;
+            padding: 100px 0;
+
+            .container {
+                display: flex;
+                align-items: center;
+                flex-wrap: nowrap;
+                flex-direction: column;
+
+                .principal {
+                    
+                    .title {
+                        padding-bottom: 12px;
+                        text-transform: uppercase;
+                        color: #003f5b;
+                    }
+    
+                    .price {
+                        display: flex;
+                        justify-content: space-between;
+                        background-color: #55ba59;
+                        padding: 12px;
+                        margin-bottom: 12px;
+                        border-bottom: 1px solid #3a8b3e;
+
+                        .left {
+                            display: flex;
+                            justify-content: space-between;
+                            width: 60%;
+
+                            .us {
+                                color: #85f380;
+                                font-weight: bold;
+
+                                strong {
+                                    color: white;
+                                }
+                            }
+
+                            .available {
+                                color: #85f380;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+
+                .random {
+
+                    .random-text {
+                        color: black;
+                    }
+
+                    .random-img {
+
+                        img {
+                            height: 200px;
+                            width: 100px;
+                        }
+                    }
+                }
+            }
+
+            
+        }
+
+        
+        .mi-serve {
+            padding: 30px 0 100px;
+
+            .talent {
+
+                .table {
+
+                    thead {
+
+                        tr {
+
+                            th {
+                                font-size: 20px;
+                                color: #003f5b;
+                            }
+                        }
+                    }
+
+                    tbody {
+
+                        tr {
+
+                            th {
+                                color: #003f5b;
+                            }
+
+                            td {
+
+                                a {
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .specs {
+
+                .table {
+
+                    thead {
+
+                        tr {
+
+                            th {
+                                font-size: 20px;
+                                color: #003f5b;
+                            }
+                        }
+                    }
+
+                    tbody {
+
+                        tr {
+
+                            th {
+                                color: #003f5b;
+                            }
+
+                            td {
+
+                                a {
+                                    text-decoration: none;
+                                    text-transform: uppercase;
+                                    font-weight: bold;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+
+}
+
+
+
+// SINGLE THUMB
