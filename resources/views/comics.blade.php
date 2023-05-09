@@ -12,7 +12,7 @@
 
             <div class="col-2 comic-inner">
 
-                <a href="">
+                <a href="{{ route('Action Comics') }}">
 
                     <img src="{{ $comic['thumb'] }}" alt="IMG">
 

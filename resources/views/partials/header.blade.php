@@ -21,7 +21,11 @@
 
         <div class="logo">
 
-            <img src="{{ asset('img/dc-logo.png') }}" alt="">
+            <a href="{{ route('homepage') }}">
+
+                <img src="{{ asset('img/dc-logo.png') }}" alt="">
+
+            </a>
 
         </div>
 

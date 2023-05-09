@@ -82,7 +82,7 @@
                             <th scope="col">Talent</th>
                           </tr>
                         </thead>
-                        <tbody class="table-group-divider">
+                        <tbody class="table-group-divider" style="border-color: #dee2e6;">
                           <tr>
                             <th scope="row" colspan="2">Art by:</th>
                             <td style="padding-left: 100px">
@@ -124,7 +124,7 @@
                             <th scope="col">Specs</th>
                           </tr>
                         </thead>
-                        <tbody class="table-group-divider">
+                        <tbody class="table-group-divider" style="border-color: #dee2e6;">
                           <tr>
                             <th scope="row">Series:</th>
                             <td> <a href="">{{$comics[0]['series']}}</a></td>

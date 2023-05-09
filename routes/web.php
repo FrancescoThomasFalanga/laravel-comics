@@ -274,7 +274,7 @@ Route::get('/comics', function () {
 
     $comics = config('comics');
 
-    return view('homepage', $data, ['links' => $links, 'comics' => $comics, 'infoSection' => $infoSection]);
+    return view('comics', $data, ['links' => $links, 'comics' => $comics, 'infoSection' => $infoSection]);
 })->name('comics');
 
 Route::get('/movies', function () {
