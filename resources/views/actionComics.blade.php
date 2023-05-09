@@ -6,7 +6,7 @@
 
         <div class="container single-thumb">
 
-            <img src="{{$comics[0]['thumb']}}" alt="">
+            <img src="{{$comics[$index]['thumb']}}" alt="">
 
         </div>
 
@@ -22,7 +22,7 @@
         
                         <div class="title">
         
-                            <h2>{{ $comics[0]['title'] }}</h2>
+                            <h2>{{ $comics[$index]['title'] }}</h2>
         
                         </div>
         
@@ -30,7 +30,7 @@
         
                             <div class="left">
         
-                                <span class="us">U.S. Price: <strong>{{$comics[0]['price']}}</strong></span>
+                                <span class="us">U.S. Price: <strong>{{$comics[$index]['price']}}</strong></span>
         
                                 <span class="available">AVAILABLE</span>
         
@@ -46,7 +46,7 @@
         
                         <div class="desc">
         
-                            <p>{{$comics[0]['description']}}</p>
+                            <p>{{$comics[$index]['description']}}</p>
         
                         </div>
         
@@ -87,7 +87,7 @@
                             <th scope="row" colspan="2">Art by:</th>
                             <td style="padding-left: 100px">
 
-                                @foreach ($comics[0]['artists'] as $artist)
+                                @foreach ($comics[$index]['artists'] as $artist)
 
                                 <a href="">
                                     {{$artist}}
@@ -101,7 +101,7 @@
                             <th scope="row" colspan="2">Written by:</th>
                             <td style="padding-left: 100px">
 
-                                @foreach ($comics[0]['writers'] as $artist)
+                                @foreach ($comics[$index]['writers'] as $artist)
 
                                 <a href="">
                                     {{$artist}}
@@ -127,15 +127,15 @@
                         <tbody class="table-group-divider" style="border-color: #dee2e6;">
                           <tr>
                             <th scope="row">Series:</th>
-                            <td> <a href="">{{$comics[0]['series']}}</a></td>
+                            <td> <a href="">{{$comics[$index]['series']}}</a></td>
                           </tr>
                           <tr>
                             <th scope="row">U.S. Price:</th>
-                            <td>{{$comics[0]['price']}}</td>
+                            <td>{{$comics[$index]['price']}}</td>
                           </tr>
                           <tr>
                             <th scope="row">On Sale</th>
-                            <td>{{$comics[0]['sale_date']}}</td>
+                            <td>{{$comics[$index]['sale_date']}}</td>
                           </tr>
                         </tbody>
                       </table>

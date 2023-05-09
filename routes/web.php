@@ -1069,5 +1069,8 @@ Route::get('/action-comics', function () {
 
     $comics = config('comics');
 
-    return view('actionComics', $data, ['links' => $links, 'comics' => $comics, 'infoSection' => $infoSection]);
+    $index = request()->index;
+    
+
+    return view('actionComics', $data, ['links' => $links, 'comics' => $comics, 'infoSection' => $infoSection, 'index' => $index]);
 })->name('Action Comics');
