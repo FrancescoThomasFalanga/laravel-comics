@@ -30,179 +30,23 @@ use Illuminate\Support\Facades\Route;
 // ROUTE PER L'HOMEPAGE
 Route::get('/', function () {
     
-    $links = [
-        'characters',
-        'comics',
-        'movies',
-        'tv',
-        'games',
-        'collectibles',
-        'videos',
-        'fans',
-        'news',
-        'shop'
-    ];
-
-    $infoSection = [
-        [
-            'img' => 'img/buy-comics-digital-comics.png',
-            'title' => 'digital comics'
-        ],
-        [
-            'img' => 'img/buy-comics-merchandise.png',
-            'title' => 'dc merchandise'
-        ],
-        [
-            'img' => 'img/buy-comics-subscriptions.png',
-            'title' => 'subscription'
-        ],
-        [
-            'img' => 'img/buy-comics-shop-locator.png',
-            'title' => 'comic shop locator'
-        ],
-        [
-            'img' => 'img/buy-dc-power-visa.svg',
-            'title' => 'dc power visa'
-        ],
-    ];
-
-    $dcComicsLinks = [
-        "Character",
-        "Comics",
-        "Movies",
-        "TV",
-        "Games",
-        "Videos",
-        "News",
-    ];
-
-    $dcLinks = [
-        "Terms Of Use",
-        "Privacy policy (New)",
-        "Ad Choises",
-        "Advertising",
-        "Jobs",
-        "Subscriptions",
-        "Talent Workshops",
-        "CPSC Certificates",
-        "Ratings",
-        "Shop Help",
-        "Contact us",
-    ];
-
-    $sitesLinks = [
-        "DC",
-        "MAD Magazine",
-        "DC Kids",
-        "DC Universe",
-        "DC Power Visa",
-    ];
-
-    $shopLinks = [
-        "Shop DC",
-        "Shop DC Collectibles"
-    ];
-
-    $data = [
-        'dcComicsLinks' => $dcComicsLinks,
-        'dcLinks' => $dcLinks,
-        'sitesLinks' => $sitesLinks,
-        'shopLinks' => $shopLinks
-    ];
+    $data = config('data');
 
 
     $comics = config('comics');
 
-    return view('homepage', $data, ['links' => $links, 'comics' => $comics, 'infoSection' => $infoSection]);
+    return view('homepage', compact('data', 'comics'));
 })->name('homepage');
 
 // ROUTE PER I PERSONAGGI
 Route::get('/characters', function () {
     
-    $links = [
-        'characters',
-        'comics',
-        'movies',
-        'tv',
-        'games',
-        'collectibles',
-        'videos',
-        'fans',
-        'news',
-        'shop'
-    ];
-
-    $infoSection = [
-        [
-            'img' => 'img/buy-comics-digital-comics.png',
-            'title' => 'digital comics'
-        ],
-        [
-            'img' => 'img/buy-comics-merchandise.png',
-            'title' => 'dc merchandise'
-        ],
-        [
-            'img' => 'img/buy-comics-subscriptions.png',
-            'title' => 'subscription'
-        ],
-        [
-            'img' => 'img/buy-comics-shop-locator.png',
-            'title' => 'comic shop locator'
-        ],
-        [
-            'img' => 'img/buy-dc-power-visa.svg',
-            'title' => 'dc power visa'
-        ],
-    ];
-
-    $dcComicsLinks = [
-        "Character",
-        "Comics",
-        "Movies",
-        "TV",
-        "Games",
-        "Videos",
-        "News",
-    ];
-
-    $dcLinks = [
-        "Terms Of Use",
-        "Privacy policy (New)",
-        "Ad Choises",
-        "Advertising",
-        "Jobs",
-        "Subscriptions",
-        "Talent Workshops",
-        "CPSC Certificates",
-        "Ratings",
-        "Shop Help",
-        "Contact us",
-    ];
-
-    $sitesLinks = [
-        "DC",
-        "MAD Magazine",
-        "DC Kids",
-        "DC Universe",
-        "DC Power Visa",
-    ];
-
-    $shopLinks = [
-        "Shop DC",
-        "Shop DC Collectibles"
-    ];
-
-    $data = [
-        'dcComicsLinks' => $dcComicsLinks,
-        'dcLinks' => $dcLinks,
-        'sitesLinks' => $sitesLinks,
-        'shopLinks' => $shopLinks
-    ];
+    $data = config('data');
 
 
     $comics = config('comics');
 
-    return view('characters', $data, ['links' => $links, 'comics' => $comics, 'infoSection' => $infoSection]);
+    return view('characters', compact('data', 'comics'));
 })->name('characters');
 // /ROUTE PER I PERSONAGGI
 
@@ -210,90 +54,12 @@ Route::get('/characters', function () {
 // ROUTE PER I LIBRI
 Route::get('/comics', function () {
     
-    $links = [
-        'characters',
-        'comics',
-        'movies',
-        'tv',
-        'games',
-        'collectibles',
-        'videos',
-        'fans',
-        'news',
-        'shop'
-    ];
-
-    $infoSection = [
-        [
-            'img' => 'img/buy-comics-digital-comics.png',
-            'title' => 'digital comics'
-        ],
-        [
-            'img' => 'img/buy-comics-merchandise.png',
-            'title' => 'dc merchandise'
-        ],
-        [
-            'img' => 'img/buy-comics-subscriptions.png',
-            'title' => 'subscription'
-        ],
-        [
-            'img' => 'img/buy-comics-shop-locator.png',
-            'title' => 'comic shop locator'
-        ],
-        [
-            'img' => 'img/buy-dc-power-visa.svg',
-            'title' => 'dc power visa'
-        ],
-    ];
-
-    $dcComicsLinks = [
-        "Character",
-        "Comics",
-        "Movies",
-        "TV",
-        "Games",
-        "Videos",
-        "News",
-    ];
-
-    $dcLinks = [
-        "Terms Of Use",
-        "Privacy policy (New)",
-        "Ad Choises",
-        "Advertising",
-        "Jobs",
-        "Subscriptions",
-        "Talent Workshops",
-        "CPSC Certificates",
-        "Ratings",
-        "Shop Help",
-        "Contact us",
-    ];
-
-    $sitesLinks = [
-        "DC",
-        "MAD Magazine",
-        "DC Kids",
-        "DC Universe",
-        "DC Power Visa",
-    ];
-
-    $shopLinks = [
-        "Shop DC",
-        "Shop DC Collectibles"
-    ];
-
-    $data = [
-        'dcComicsLinks' => $dcComicsLinks,
-        'dcLinks' => $dcLinks,
-        'sitesLinks' => $sitesLinks,
-        'shopLinks' => $shopLinks
-    ];
+    $data = config('data');
 
 
     $comics = config('comics');
 
-    return view('comics', $data, ['links' => $links, 'comics' => $comics, 'infoSection' => $infoSection]);
+    return view('comics', compact('data', 'comics'));
 })->name('comics');
 // /ROUTE PER I LIBRI
 
@@ -301,90 +67,12 @@ Route::get('/comics', function () {
 // ROUTE PER I FILM
 Route::get('/movies', function () {
     
-    $links = [
-        'characters',
-        'comics',
-        'movies',
-        'tv',
-        'games',
-        'collectibles',
-        'videos',
-        'fans',
-        'news',
-        'shop'
-    ];
-
-    $infoSection = [
-        [
-            'img' => 'img/buy-comics-digital-comics.png',
-            'title' => 'digital comics'
-        ],
-        [
-            'img' => 'img/buy-comics-merchandise.png',
-            'title' => 'dc merchandise'
-        ],
-        [
-            'img' => 'img/buy-comics-subscriptions.png',
-            'title' => 'subscription'
-        ],
-        [
-            'img' => 'img/buy-comics-shop-locator.png',
-            'title' => 'comic shop locator'
-        ],
-        [
-            'img' => 'img/buy-dc-power-visa.svg',
-            'title' => 'dc power visa'
-        ],
-    ];
-
-    $dcComicsLinks = [
-        "Character",
-        "Comics",
-        "Movies",
-        "TV",
-        "Games",
-        "Videos",
-        "News",
-    ];
-
-    $dcLinks = [
-        "Terms Of Use",
-        "Privacy policy (New)",
-        "Ad Choises",
-        "Advertising",
-        "Jobs",
-        "Subscriptions",
-        "Talent Workshops",
-        "CPSC Certificates",
-        "Ratings",
-        "Shop Help",
-        "Contact us",
-    ];
-
-    $sitesLinks = [
-        "DC",
-        "MAD Magazine",
-        "DC Kids",
-        "DC Universe",
-        "DC Power Visa",
-    ];
-
-    $shopLinks = [
-        "Shop DC",
-        "Shop DC Collectibles"
-    ];
-
-    $data = [
-        'dcComicsLinks' => $dcComicsLinks,
-        'dcLinks' => $dcLinks,
-        'sitesLinks' => $sitesLinks,
-        'shopLinks' => $shopLinks
-    ];
+    $data = config('data');
 
 
     $comics = config('comics');
 
-    return view('movies', $data, ['links' => $links, 'comics' => $comics, 'infoSection' => $infoSection]);
+    return view('movies', compact('data', 'comics'));
 })->name('movies');
 // /ROUTE PER I FILM
 
@@ -392,90 +80,12 @@ Route::get('/movies', function () {
 // ROUTE PER LE SERIE
 Route::get('/tv', function () {
     
-    $links = [
-        'characters',
-        'comics',
-        'movies',
-        'tv',
-        'games',
-        'collectibles',
-        'videos',
-        'fans',
-        'news',
-        'shop'
-    ];
-
-    $infoSection = [
-        [
-            'img' => 'img/buy-comics-digital-comics.png',
-            'title' => 'digital comics'
-        ],
-        [
-            'img' => 'img/buy-comics-merchandise.png',
-            'title' => 'dc merchandise'
-        ],
-        [
-            'img' => 'img/buy-comics-subscriptions.png',
-            'title' => 'subscription'
-        ],
-        [
-            'img' => 'img/buy-comics-shop-locator.png',
-            'title' => 'comic shop locator'
-        ],
-        [
-            'img' => 'img/buy-dc-power-visa.svg',
-            'title' => 'dc power visa'
-        ],
-    ];
-
-    $dcComicsLinks = [
-        "Character",
-        "Comics",
-        "Movies",
-        "TV",
-        "Games",
-        "Videos",
-        "News",
-    ];
-
-    $dcLinks = [
-        "Terms Of Use",
-        "Privacy policy (New)",
-        "Ad Choises",
-        "Advertising",
-        "Jobs",
-        "Subscriptions",
-        "Talent Workshops",
-        "CPSC Certificates",
-        "Ratings",
-        "Shop Help",
-        "Contact us",
-    ];
-
-    $sitesLinks = [
-        "DC",
-        "MAD Magazine",
-        "DC Kids",
-        "DC Universe",
-        "DC Power Visa",
-    ];
-
-    $shopLinks = [
-        "Shop DC",
-        "Shop DC Collectibles"
-    ];
-
-    $data = [
-        'dcComicsLinks' => $dcComicsLinks,
-        'dcLinks' => $dcLinks,
-        'sitesLinks' => $sitesLinks,
-        'shopLinks' => $shopLinks
-    ];
+    $data = config('data');
 
 
     $comics = config('comics');
 
-    return view('tv', $data, ['links' => $links, 'comics' => $comics, 'infoSection' => $infoSection]);
+    return view('tv', compact('data', 'comics'));
 })->name('tv');
 // /ROUTE PER LE SERIE
 
@@ -483,90 +93,12 @@ Route::get('/tv', function () {
 // ROUTE PER I GIOCHI
 Route::get('/games', function () {
     
-    $links = [
-        'characters',
-        'comics',
-        'movies',
-        'tv',
-        'games',
-        'collectibles',
-        'videos',
-        'fans',
-        'news',
-        'shop'
-    ];
-
-    $infoSection = [
-        [
-            'img' => 'img/buy-comics-digital-comics.png',
-            'title' => 'digital comics'
-        ],
-        [
-            'img' => 'img/buy-comics-merchandise.png',
-            'title' => 'dc merchandise'
-        ],
-        [
-            'img' => 'img/buy-comics-subscriptions.png',
-            'title' => 'subscription'
-        ],
-        [
-            'img' => 'img/buy-comics-shop-locator.png',
-            'title' => 'comic shop locator'
-        ],
-        [
-            'img' => 'img/buy-dc-power-visa.svg',
-            'title' => 'dc power visa'
-        ],
-    ];
-
-    $dcComicsLinks = [
-        "Character",
-        "Comics",
-        "Movies",
-        "TV",
-        "Games",
-        "Videos",
-        "News",
-    ];
-
-    $dcLinks = [
-        "Terms Of Use",
-        "Privacy policy (New)",
-        "Ad Choises",
-        "Advertising",
-        "Jobs",
-        "Subscriptions",
-        "Talent Workshops",
-        "CPSC Certificates",
-        "Ratings",
-        "Shop Help",
-        "Contact us",
-    ];
-
-    $sitesLinks = [
-        "DC",
-        "MAD Magazine",
-        "DC Kids",
-        "DC Universe",
-        "DC Power Visa",
-    ];
-
-    $shopLinks = [
-        "Shop DC",
-        "Shop DC Collectibles"
-    ];
-
-    $data = [
-        'dcComicsLinks' => $dcComicsLinks,
-        'dcLinks' => $dcLinks,
-        'sitesLinks' => $sitesLinks,
-        'shopLinks' => $shopLinks
-    ];
+    $data = config('data');
 
 
     $comics = config('comics');
 
-    return view('games', $data, ['links' => $links, 'comics' => $comics, 'infoSection' => $infoSection]);
+    return view('games', compact('data', 'comics'));
 })->name('games');
 // /ROUTE PER I GIOCHI
 
@@ -574,90 +106,12 @@ Route::get('/games', function () {
 // ROUTE PER I COLLEZIONABILI
 Route::get('/collectibles', function () {
     
-    $links = [
-        'characters',
-        'comics',
-        'movies',
-        'tv',
-        'games',
-        'collectibles',
-        'videos',
-        'fans',
-        'news',
-        'shop'
-    ];
-
-    $infoSection = [
-        [
-            'img' => 'img/buy-comics-digital-comics.png',
-            'title' => 'digital comics'
-        ],
-        [
-            'img' => 'img/buy-comics-merchandise.png',
-            'title' => 'dc merchandise'
-        ],
-        [
-            'img' => 'img/buy-comics-subscriptions.png',
-            'title' => 'subscription'
-        ],
-        [
-            'img' => 'img/buy-comics-shop-locator.png',
-            'title' => 'comic shop locator'
-        ],
-        [
-            'img' => 'img/buy-dc-power-visa.svg',
-            'title' => 'dc power visa'
-        ],
-    ];
-
-    $dcComicsLinks = [
-        "Character",
-        "Comics",
-        "Movies",
-        "TV",
-        "Games",
-        "Videos",
-        "News",
-    ];
-
-    $dcLinks = [
-        "Terms Of Use",
-        "Privacy policy (New)",
-        "Ad Choises",
-        "Advertising",
-        "Jobs",
-        "Subscriptions",
-        "Talent Workshops",
-        "CPSC Certificates",
-        "Ratings",
-        "Shop Help",
-        "Contact us",
-    ];
-
-    $sitesLinks = [
-        "DC",
-        "MAD Magazine",
-        "DC Kids",
-        "DC Universe",
-        "DC Power Visa",
-    ];
-
-    $shopLinks = [
-        "Shop DC",
-        "Shop DC Collectibles"
-    ];
-
-    $data = [
-        'dcComicsLinks' => $dcComicsLinks,
-        'dcLinks' => $dcLinks,
-        'sitesLinks' => $sitesLinks,
-        'shopLinks' => $shopLinks
-    ];
+    $data = config('data');
 
 
     $comics = config('comics');
 
-    return view('collectibles', $data, ['links' => $links, 'comics' => $comics, 'infoSection' => $infoSection]);
+    return view('collectibles', compact('data', 'comics'));
 })->name('collectibles');
 // ROUTE PER I COLLEZIONABILI
 
@@ -665,90 +119,12 @@ Route::get('/collectibles', function () {
 // ROUTE PER I VIDEO
 Route::get('/videos', function () {
     
-    $links = [
-        'characters',
-        'comics',
-        'movies',
-        'tv',
-        'games',
-        'collectibles',
-        'videos',
-        'fans',
-        'news',
-        'shop'
-    ];
-
-    $infoSection = [
-        [
-            'img' => 'img/buy-comics-digital-comics.png',
-            'title' => 'digital comics'
-        ],
-        [
-            'img' => 'img/buy-comics-merchandise.png',
-            'title' => 'dc merchandise'
-        ],
-        [
-            'img' => 'img/buy-comics-subscriptions.png',
-            'title' => 'subscription'
-        ],
-        [
-            'img' => 'img/buy-comics-shop-locator.png',
-            'title' => 'comic shop locator'
-        ],
-        [
-            'img' => 'img/buy-dc-power-visa.svg',
-            'title' => 'dc power visa'
-        ],
-    ];
-
-    $dcComicsLinks = [
-        "Character",
-        "Comics",
-        "Movies",
-        "TV",
-        "Games",
-        "Videos",
-        "News",
-    ];
-
-    $dcLinks = [
-        "Terms Of Use",
-        "Privacy policy (New)",
-        "Ad Choises",
-        "Advertising",
-        "Jobs",
-        "Subscriptions",
-        "Talent Workshops",
-        "CPSC Certificates",
-        "Ratings",
-        "Shop Help",
-        "Contact us",
-    ];
-
-    $sitesLinks = [
-        "DC",
-        "MAD Magazine",
-        "DC Kids",
-        "DC Universe",
-        "DC Power Visa",
-    ];
-
-    $shopLinks = [
-        "Shop DC",
-        "Shop DC Collectibles"
-    ];
-
-    $data = [
-        'dcComicsLinks' => $dcComicsLinks,
-        'dcLinks' => $dcLinks,
-        'sitesLinks' => $sitesLinks,
-        'shopLinks' => $shopLinks
-    ];
+    $data = config('data');
 
 
     $comics = config('comics');
 
-    return view('videos', $data, ['links' => $links, 'comics' => $comics, 'infoSection' => $infoSection]);
+    return view('videos', compact('data', 'comics'));
 })->name('videos');
 // /ROUTE PER I VIDEO
 
@@ -756,90 +132,12 @@ Route::get('/videos', function () {
 // ROUTE PER I FAN
 Route::get('/fans', function () {
     
-    $links = [
-        'characters',
-        'comics',
-        'movies',
-        'tv',
-        'games',
-        'collectibles',
-        'videos',
-        'fans',
-        'news',
-        'shop'
-    ];
-
-    $infoSection = [
-        [
-            'img' => 'img/buy-comics-digital-comics.png',
-            'title' => 'digital comics'
-        ],
-        [
-            'img' => 'img/buy-comics-merchandise.png',
-            'title' => 'dc merchandise'
-        ],
-        [
-            'img' => 'img/buy-comics-subscriptions.png',
-            'title' => 'subscription'
-        ],
-        [
-            'img' => 'img/buy-comics-shop-locator.png',
-            'title' => 'comic shop locator'
-        ],
-        [
-            'img' => 'img/buy-dc-power-visa.svg',
-            'title' => 'dc power visa'
-        ],
-    ];
-
-    $dcComicsLinks = [
-        "Character",
-        "Comics",
-        "Movies",
-        "TV",
-        "Games",
-        "Videos",
-        "News",
-    ];
-
-    $dcLinks = [
-        "Terms Of Use",
-        "Privacy policy (New)",
-        "Ad Choises",
-        "Advertising",
-        "Jobs",
-        "Subscriptions",
-        "Talent Workshops",
-        "CPSC Certificates",
-        "Ratings",
-        "Shop Help",
-        "Contact us",
-    ];
-
-    $sitesLinks = [
-        "DC",
-        "MAD Magazine",
-        "DC Kids",
-        "DC Universe",
-        "DC Power Visa",
-    ];
-
-    $shopLinks = [
-        "Shop DC",
-        "Shop DC Collectibles"
-    ];
-
-    $data = [
-        'dcComicsLinks' => $dcComicsLinks,
-        'dcLinks' => $dcLinks,
-        'sitesLinks' => $sitesLinks,
-        'shopLinks' => $shopLinks
-    ];
+    $data = config('data');
 
 
     $comics = config('comics');
 
-    return view('fans', $data, ['links' => $links, 'comics' => $comics, 'infoSection' => $infoSection]);
+    return view('fans', compact('data', 'comics'));
 })->name('fans');
 // /ROUTE PER I FAN
 
@@ -847,90 +145,12 @@ Route::get('/fans', function () {
 // ROUTE PER LE NEWS
 Route::get('/news', function () {
     
-    $links = [
-        'characters',
-        'comics',
-        'movies',
-        'tv',
-        'games',
-        'collectibles',
-        'videos',
-        'fans',
-        'news',
-        'shop'
-    ];
-
-    $infoSection = [
-        [
-            'img' => 'img/buy-comics-digital-comics.png',
-            'title' => 'digital comics'
-        ],
-        [
-            'img' => 'img/buy-comics-merchandise.png',
-            'title' => 'dc merchandise'
-        ],
-        [
-            'img' => 'img/buy-comics-subscriptions.png',
-            'title' => 'subscription'
-        ],
-        [
-            'img' => 'img/buy-comics-shop-locator.png',
-            'title' => 'comic shop locator'
-        ],
-        [
-            'img' => 'img/buy-dc-power-visa.svg',
-            'title' => 'dc power visa'
-        ],
-    ];
-
-    $dcComicsLinks = [
-        "Character",
-        "Comics",
-        "Movies",
-        "TV",
-        "Games",
-        "Videos",
-        "News",
-    ];
-
-    $dcLinks = [
-        "Terms Of Use",
-        "Privacy policy (New)",
-        "Ad Choises",
-        "Advertising",
-        "Jobs",
-        "Subscriptions",
-        "Talent Workshops",
-        "CPSC Certificates",
-        "Ratings",
-        "Shop Help",
-        "Contact us",
-    ];
-
-    $sitesLinks = [
-        "DC",
-        "MAD Magazine",
-        "DC Kids",
-        "DC Universe",
-        "DC Power Visa",
-    ];
-
-    $shopLinks = [
-        "Shop DC",
-        "Shop DC Collectibles"
-    ];
-
-    $data = [
-        'dcComicsLinks' => $dcComicsLinks,
-        'dcLinks' => $dcLinks,
-        'sitesLinks' => $sitesLinks,
-        'shopLinks' => $shopLinks
-    ];
+    $data = config('data');
 
 
     $comics = config('comics');
 
-    return view('news', $data, ['links' => $links, 'comics' => $comics, 'infoSection' => $infoSection]);
+    return view('news', compact('data', 'comics'));
 })->name('news');
 // /ROUTE PER LE NEWS
 
@@ -938,90 +158,12 @@ Route::get('/news', function () {
 // ROUTE PER LO SHOP
 Route::get('/shop', function () {
     
-    $links = [
-        'characters',
-        'comics',
-        'movies',
-        'tv',
-        'games',
-        'collectibles',
-        'videos',
-        'fans',
-        'news',
-        'shop'
-    ];
-
-    $infoSection = [
-        [
-            'img' => 'img/buy-comics-digital-comics.png',
-            'title' => 'digital comics'
-        ],
-        [
-            'img' => 'img/buy-comics-merchandise.png',
-            'title' => 'dc merchandise'
-        ],
-        [
-            'img' => 'img/buy-comics-subscriptions.png',
-            'title' => 'subscription'
-        ],
-        [
-            'img' => 'img/buy-comics-shop-locator.png',
-            'title' => 'comic shop locator'
-        ],
-        [
-            'img' => 'img/buy-dc-power-visa.svg',
-            'title' => 'dc power visa'
-        ],
-    ];
-
-    $dcComicsLinks = [
-        "Character",
-        "Comics",
-        "Movies",
-        "TV",
-        "Games",
-        "Videos",
-        "News",
-    ];
-
-    $dcLinks = [
-        "Terms Of Use",
-        "Privacy policy (New)",
-        "Ad Choises",
-        "Advertising",
-        "Jobs",
-        "Subscriptions",
-        "Talent Workshops",
-        "CPSC Certificates",
-        "Ratings",
-        "Shop Help",
-        "Contact us",
-    ];
-
-    $sitesLinks = [
-        "DC",
-        "MAD Magazine",
-        "DC Kids",
-        "DC Universe",
-        "DC Power Visa",
-    ];
-
-    $shopLinks = [
-        "Shop DC",
-        "Shop DC Collectibles"
-    ];
-
-    $data = [
-        'dcComicsLinks' => $dcComicsLinks,
-        'dcLinks' => $dcLinks,
-        'sitesLinks' => $sitesLinks,
-        'shopLinks' => $shopLinks
-    ];
+    $data = config('data');
 
 
     $comics = config('comics');
 
-    return view('shop', $data, ['links' => $links, 'comics' => $comics, 'infoSection' => $infoSection]);
+    return view('shop', compact('data', 'comics'));
 })->name('shop');
 // /ROUTE PER LO SHOP
 
@@ -1037,93 +179,14 @@ Route::get('/shop', function () {
 // ROUTE PER I SINGOLI COMIC
 Route::get('/action-comics', function () {
     
-    $links = [
-        'characters',
-        'comics',
-        'movies',
-        'tv',
-        'games',
-        'collectibles',
-        'videos',
-        'fans',
-        'news',
-        'shop'
-    ];
-
-    $infoSection = [
-        [
-            'img' => 'img/buy-comics-digital-comics.png',
-            'title' => 'digital comics'
-        ],
-        [
-            'img' => 'img/buy-comics-merchandise.png',
-            'title' => 'dc merchandise'
-        ],
-        [
-            'img' => 'img/buy-comics-subscriptions.png',
-            'title' => 'subscription'
-        ],
-        [
-            'img' => 'img/buy-comics-shop-locator.png',
-            'title' => 'comic shop locator'
-        ],
-        [
-            'img' => 'img/buy-dc-power-visa.svg',
-            'title' => 'dc power visa'
-        ],
-    ];
-
-    $dcComicsLinks = [
-        "Character",
-        "Comics",
-        "Movies",
-        "TV",
-        "Games",
-        "Videos",
-        "News",
-    ];
-
-    $dcLinks = [
-        "Terms Of Use",
-        "Privacy policy (New)",
-        "Ad Choises",
-        "Advertising",
-        "Jobs",
-        "Subscriptions",
-        "Talent Workshops",
-        "CPSC Certificates",
-        "Ratings",
-        "Shop Help",
-        "Contact us",
-    ];
-
-    $sitesLinks = [
-        "DC",
-        "MAD Magazine",
-        "DC Kids",
-        "DC Universe",
-        "DC Power Visa",
-    ];
-
-    $shopLinks = [
-        "Shop DC",
-        "Shop DC Collectibles"
-    ];
-
-    $data = [
-        'dcComicsLinks' => $dcComicsLinks,
-        'dcLinks' => $dcLinks,
-        'sitesLinks' => $sitesLinks,
-        'shopLinks' => $shopLinks
-    ];
-
+    $data = config('data');
 
     $comics = config('comics');
 
     $index = request()->index;
     
 
-    return view('actionComics', $data, ['links' => $links, 'comics' => $comics, 'infoSection' => $infoSection, 'index' => $index]);
+    return view('actionComics', compact('data', 'comics', 'index'));
 })->name('Action Comics');
 // /ROUTE PER I SINGOLI COMIC
 

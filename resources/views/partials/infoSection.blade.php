@@ -5,7 +5,7 @@
 
         <div class="row">
 
-            @foreach ($infoSection as $info)
+            @foreach ($data[1] as $info)
 
             <div class="col-2">
 

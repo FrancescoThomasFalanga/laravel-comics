@@ -16,7 +16,7 @@
     
                         <ul>
     
-                            @foreach ($dcComicsLinks as $item)
+                            @foreach ($data[2] as $item)
                             <li>
                                 {{ $item }}
                             </li>
@@ -36,7 +36,7 @@
     
                         <ul>
     
-                            @foreach ($shopLinks as $item)
+                            @foreach ($data[5] as $item)
                             <li>
                                 {{ $item }}
                             </li>
@@ -58,7 +58,7 @@
 
                     <ul>
 
-                        @foreach ($dcLinks as $item)
+                        @foreach ($data[3] as $item)
                         <li>
                             {{ $item }}
                         </li>
@@ -78,7 +78,7 @@
 
                     <ul>
 
-                        @foreach ($sitesLinks as $item)
+                        @foreach ($data[4] as $item)
                         <li>
                             {{ $item }}
                         </li>

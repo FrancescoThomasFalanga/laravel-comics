@@ -49,7 +49,7 @@
 
             <ul>
                 {{-- questo foreach prenderà i vari link importati grazie alla ruote --}}
-                @foreach ($links as $link)
+                @foreach ($data[0] as $link)
                     <li>
 
                         <a class="{{ (request()->is($link)) ? 'active' : '' }}" href="{{ route($link) }}">
